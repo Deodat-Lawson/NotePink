@@ -10,6 +10,7 @@ import Showdown from "showdown";
 import styles from "~/styles/notes.module.css";
 
 
+
 // Add or update your Tailwind/CSS modules with a class that hides the .mde-tabs
 // For example, if you are using a global CSS file, place this there:
 //
@@ -17,6 +18,9 @@ import styles from "~/styles/notes.module.css";
 //   display: none;
 // }
 
+type Note = {
+
+}
 
 
 type NotesEditorProps = {
