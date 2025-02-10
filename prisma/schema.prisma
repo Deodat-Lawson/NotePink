@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  clerkUserId String   @unique
+  name        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // A user can have multiple notes
+  notes Note[]
+}
+
+model Note {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Foreign key field referencing the user
+  userId Int
+  // Relation definition linking the Note to a single User
+  user   User @relation(fields: [userId], references: [id])
+
+  // You can add indexes if needed for search or quick lookups
+  @@index([title])
+}

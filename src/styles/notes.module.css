@@ -1,0 +1,265 @@
+/* 1) From the very first snippet */
+.button {
+    @apply bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-400;
+}
+
+/* 2) From the second snippet */
+.mainTitle {
+    @apply text-3xl font-bold text-pink-600 mb-6;
+}
+
+.contentContainer {
+    @apply max-w-5xl mx-auto pb-5 dark:bg-white;
+}
+
+.noteTitle {
+    @apply text-3xl font-extrabold text-pink-600 mb-6 border-b-2 border-pink-200 pb-2 cursor-pointer pt-3;
+}
+
+.editableTitle {
+    @apply w-full text-3xl font-extrabold text-pink-600 mb-4 bg-transparent border-b-2 border-pink-200 focus:outline-none focus:border-pink-400 px-2 py-1 pt-5;
+}
+
+.emptyState {
+    @apply text-gray-500 italic;
+}
+
+.buttonContainer {
+    @apply mt-4 flex space-x-4;
+}
+
+.saveButton {
+    @apply bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.cancelButton {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.toggleButton {
+    @apply text-sm text-pink-600 underline mb-2;
+}
+
+.hiddenMdeTabs {
+    @apply hidden;
+}
+
+.emptyStateContainer {
+    @apply flex items-center justify-center min-h-screen;
+}
+
+.lastModified {
+    @apply text-sm text-gray-500 mb-2 pt-5;
+}
+
+/* 3) From the third snippet */
+.sidebar {
+    @apply w-64 bg-pink-50 border-r border-pink-100 p-4;
+}
+
+.sidebarTitle {
+    @apply text-3xl font-bold text-pink-600 mb-6 pt-4;
+}
+
+.notesList {
+    @apply space-y-2;
+}
+
+.noteItem {
+    @apply p-3 rounded-lg hover:bg-pink-100 cursor-pointer transition-colors duration-200;
+}
+
+.noteItemActive {
+    @apply p-3 rounded-lg bg-pink-200 cursor-pointer;
+}
+
+.addNoteButton {
+    @apply bg-pink-500 text-white px-4 py-2 rounded mb-4 hover:bg-pink-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-400;
+}
+
+.searchInput {
+    @apply w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent placeholder-gray-400;
+}
+
+.searchIcon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400;
+}
+
+.searchContainer {
+    @apply relative;
+}
+
+.snippetText {
+    @apply text-sm text-gray-600 mt-1;
+}
+
+/* 4) From the last snippet */
+.container {
+    @apply flex min-h-screen dark:bg-white;
+}
+
+.mainContent {
+    @apply flex-1 p-8 bg-white;
+}
+
+.header {
+    @apply flex items-center justify-between p-4 bg-pink-50 border-b border-pink-100;
+}
+
+.headerTitle {
+    @apply text-3xl font-bold text-pink-600;
+}
+
+.sidebarHeader {
+    @apply flex items-center justify-between mb-6;
+}
+
+
+/* Toggle Theme Button Styles */
+.themeToggleButton {
+    @apply p-3 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2;
+}
+
+/* When the global theme is light */
+:global([data-theme="light"]) .themeToggleButton {
+    @apply bg-blue-100 text-slate-700;
+}
+
+/* When the global theme is dark */
+:global([data-theme="dark"]) .themeToggleButton {
+    @apply bg-slate-800 text-yellow-400;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] .button {
+    @apply bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-600;
+}
+
+[data-theme="dark"] .mainTitle {
+    @apply text-3xl font-bold text-pink-300 mb-6;
+}
+
+[data-theme="dark"] .contentContainer {
+    @apply max-w-5xl mx-auto pb-5 bg-gray-900 text-gray-100;
+}
+
+[data-theme="dark"] .noteTitle {
+    @apply text-3xl font-extrabold text-pink-300 mb-6 border-b-2 border-pink-600 pb-2 cursor-pointer pt-3;
+}
+
+[data-theme="dark"] .editableTitle {
+    @apply w-full text-3xl font-extrabold text-pink-300 mb-4 bg-transparent border-b-2 border-pink-600 focus:outline-none focus:border-pink-400 px-2 py-1 pt-5;
+}
+
+[data-theme="dark"] .emptyState {
+    @apply text-gray-400 italic;
+}
+
+[data-theme="dark"] .buttonContainer {
+    @apply mt-4 flex space-x-4;
+}
+
+[data-theme="dark"] .saveButton {
+    @apply bg-pink-700 hover:bg-pink-800 text-white px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+[data-theme="dark"] .cancelButton {
+    @apply bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+[data-theme="dark"] .toggleButton {
+    @apply text-sm text-pink-400 underline mb-2;
+}
+
+[data-theme="dark"] .hiddenMdeTabs {
+    @apply hidden;
+}
+
+[data-theme="dark"] .emptyStateContainer {
+    @apply flex items-center justify-center min-h-screen bg-gray-900;
+}
+
+[data-theme="dark"] .lastModified {
+    @apply text-sm text-gray-400 mb-2 pt-5;
+}
+
+[data-theme="dark"] .sidebar {
+    @apply w-64 bg-gray-900 border-r border-pink-800 p-4;
+}
+
+[data-theme="dark"] .sidebarTitle {
+    @apply text-3xl font-bold text-pink-300 mb-6;
+}
+
+[data-theme="dark"] .notesList {
+    @apply space-y-2;
+}
+
+[data-theme="dark"] .noteItem {
+    @apply p-3 rounded-lg hover:bg-gray-800 cursor-pointer transition-colors duration-200 text-amber-50;
+}
+
+[data-theme="dark"] .noteItemActive {
+    @apply p-3 rounded-lg dark:bg-gray-800 cursor-pointer text-pink-500;
+}
+
+[data-theme="dark"] .addNoteButton {
+    @apply bg-pink-700 text-white px-4 py-2 rounded mb-4 hover:bg-pink-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-600;
+}
+
+[data-theme="dark"] .searchInput {
+    @apply w-full pl-10 pr-4 py-2 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent placeholder-gray-400 bg-gray-800 text-gray-100;
+}
+
+[data-theme="dark"] .searchIcon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400;
+}
+
+[data-theme="dark"] .searchContainer {
+    @apply relative;
+}
+
+[data-theme="dark"] .snippetText {
+    @apply text-sm text-gray-300 mt-1;
+}
+
+[data-theme="dark"] .container {
+    @apply flex min-h-screen bg-gray-900;
+}
+
+[data-theme="dark"] .mainContent {
+    @apply flex-1 p-8 bg-gray-900 text-gray-100;
+}
+
+[data-theme="dark"] .header {
+    @apply flex items-center justify-between p-4 bg-gray-800 border-b border-pink-800;
+}
+
+[data-theme="dark"] .headerTitle {
+    @apply text-3xl font-bold text-pink-300;
+}
+
+[data-theme="dark"] .sidebarHeader {
+    @apply flex items-center justify-between mb-6;
+}
+
+/*[data-theme="dark"] .react-mde-container .mde-header,*/
+/*[data-theme="dark"] .react-mde-container .mde-tabs,*/
+/*[data-theme="dark"] .react-mde-container .mde-toolbar {*/
+/*    @apply bg-gray-800 text-gray-200;*/
+/*}*/
+
+/* Override the editor area */
+/*[data-theme="dark"] .react-mde-container .mde-editor,*/
+/*[data-theme="dark"] .react-mde-container .mde-textarea {*/
+/*    @apply bg-gray-900 text-gray-200;*/
+/*}*/
+
+/* Override the preview pane */
+/*[data-theme="dark"] .react-mde-container .mde-preview {*/
+/*    @apply bg-gray-900 text-gray-200;*/
+/*}*/
+
+/*[data-theme="dark"] .react-mde-textarea-wrapper {*/
+/*    @apply bg-black;*/
+/*}*/
